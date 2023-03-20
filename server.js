@@ -10,7 +10,7 @@ app.use(express.json());
 app.use("/uploads", express.static("./uploads"));
 app.use(router);
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Server start at port number ${PORT}`);
 });
